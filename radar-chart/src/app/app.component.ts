@@ -18,9 +18,10 @@ export class AppComponent {
     responsive: true,
   };
   public radarChartLabels: Label[] = ['Talk', 'Talk Comment', 'Market', 'Market Comment'];
+  
 
   public radarChartData: ChartDataSets[] = [
-    { data: [40, 29, 20, 36] }
+    { data: [40, 29, 29, 36] }
     // { data: [0, 1, 2, 3, 4, 5, 6], label: '' }
   ];
 

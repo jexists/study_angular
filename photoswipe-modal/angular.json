@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "photoswipe-modal"
+    }
+  },
+  "defaultProject": "photoswipe-modal",
+  "cli": {
+    "analytics": false
+  }
 }

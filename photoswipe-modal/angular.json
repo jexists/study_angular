@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "photoswipe": {
+    "photoswipe-modal": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/photoswipe",
+            "outputPath": "dist/photoswipe-modal",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "photoswipe:build"
+            "browserTarget": "photoswipe-modal:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "photoswipe:build:production"
+              "browserTarget": "photoswipe-modal:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "photoswipe:build"
+            "browserTarget": "photoswipe-modal:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "photoswipe:serve"
+            "devServerTarget": "photoswipe-modal:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "photoswipe:serve:production"
+              "devServerTarget": "photoswipe-modal:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "photoswipe"
+  "defaultProject": "photoswipe-modal"
 }

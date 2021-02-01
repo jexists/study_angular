@@ -1,0 +1,23 @@
+<div>
+  <div>
+    <div>{{vote}}</div>
+    <div>points</div>
+  </div>
+</div>
+<div>
+  <a href="{{link}}">{{title}}</a>
+  <ul>
+    <li>
+      <a href="#" (click)="voteUp()">
+        <i class="arrow_up"></i>
+        upvote
+      </a>
+    </li>
+    <li>
+      <a href="#" (click)="voteDown()">
+        <i class="arrow_down"></i>
+        downvote
+      </a>
+    </li>
+  </ul>
+</div>

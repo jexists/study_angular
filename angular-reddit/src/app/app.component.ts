@@ -10,6 +10,7 @@ export class AppComponent {
 
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
     console.log(title, link);
+    console.log(title.value, link.value);
     return false;
   }
 }

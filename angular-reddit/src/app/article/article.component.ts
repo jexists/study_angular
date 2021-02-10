@@ -10,8 +10,10 @@ export class ArticleComponent implements OnInit {
   link: string;
   title: string;
 
-  constructor() { 
-
+  constructor() {
+    this.votes = 10;
+    this.link = 'http://angular.io';
+    this.title = 'angular';
   }
 
   ngOnInit() {
@@ -19,10 +21,12 @@ export class ArticleComponent implements OnInit {
 
   voteUp() {
     this.votes += 1;
+    // return false;
   }
-
+  
   voteDown() {
     this.votes -= 1;
+    // return false;
   }
 
 }

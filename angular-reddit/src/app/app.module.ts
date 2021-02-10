@@ -5,10 +5,10 @@ import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
-      ArticleComponent
-   ],
+    ArticleComponent
+  ],
   imports: [
     BrowserModule
   ],

@@ -1,11 +1,12 @@
 <div>
   <div>
-    <div>{{votes}}</div>
+    <div>{{article.votes}}</div>
     <div>points</div>
   </div>
 </div>
 <div>
-  <a href="{{link}}">{{title}}</a>
+  <a href="{{article.link}}">{{article.title}}</a>
+  <div>({{article.domain()}})</div>
   <ul>
     <li>
       <a href="#" (click)="voteUp()">

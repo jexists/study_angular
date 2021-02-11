@@ -1,20 +1,22 @@
 
-<form>
-  <h3>add a link</h3>
+<div class="wrap">
+  <form class="ui large form segment">
+    <h3 class="ui header">추천 링크를 적어주세요.</h3>
 
-  <div>
-    <label for="title">title:</label>
-    <input type="text" name="title" #newtitle/>
+    <div class="field">
+      <label for="title">제목:</label>
+      <input type="text" name="title" placeholder="제목" #newtitle/>
+    </div>
+
+    <div class="field">
+      <label for="link">링크:</label>
+      <input type="text" name="link" placeholder="링크" #newlink/>
+    </div>
+
+    <button class="ui positive right floated button" type="button" (click)="addArticle(newtitle, newlink)">저장</button>
+  </form>
+
+  <div class="ui grid posts">
+    <app-article *ngFor="let article of sortedArticles()" [article]="article"></app-article>
   </div>
-
-  <div>
-    <label for="link">link:</label>
-    <input type="text" name="link" #newlink/>
-  </div>
-
-  <button type="button" (click)="addArticle(newtitle, newlink)">submit</button>
-</form>
-
-<div>
-  <app-article *ngFor="let article of articles" [article]="article"></app-article>
 </div>

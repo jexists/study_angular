@@ -12,12 +12,17 @@ export class AppComponent {
 
   constructor() {
     this.articles = [
-      new Article('anulgar', 'http://angular.io', 3),
-      new Article('fullstack', 'http://fullstack.io', 2),
-      new Article('naver', 'http://naver.com', 1),
+      new Article('React', 'https://reactjs.org/', 2),
+      new Article('Anulgar', 'http://angular.io', 3),
+      new Article('Vue', 'https://vuejs.org/', 1),
+      new Article('Svelte', 'https://svelte.dev/', 0),
     ]
   }
+
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
+    if (!title.value || !link.value) {
+      return;
+    }
     console.log(title, link);
     console.log(title.value, link.value);
     this.articles.push(new Article(title.value, link.value, 0));

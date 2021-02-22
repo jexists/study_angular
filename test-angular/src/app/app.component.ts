@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   team: string;
   searchField: FormControl;
   filterOption;
+  myTeam: string;
 
   constructor(
 
@@ -38,7 +39,7 @@ export class AppComponent implements OnInit {
       distinctUntilChanged(),
       map((e: KeyboardEvent) => this.searchField.value),
       filter(term => {
-        console.log(term);  
+        console.log(term);
         if (term === undefined) { return false; }
         this.teamlists.filter((teamgroup) => {
           teamgroup.teams.forEach((team) => {
@@ -46,8 +47,8 @@ export class AppComponent implements OnInit {
               team.en.toLowerCase().indexOf(term.toLowerCase()) >= 0 ||
               team.ko.toLowerCase().indexOf(term.toLowerCase()) >= 0
             ) {
-              console.log(team);
-              this.filterOption = team;
+              // console.log(team);
+              this.filterOption = [team];
               return team;
             }
           });
@@ -86,15 +87,15 @@ export class AppComponent implements OnInit {
   }
 
   test(input) {
-    
+    // console.log(input);
 
-    this.teamlists.filter((teamgroup) => {
+    this.filterOption = this.teamlists.filter((teamgroup) => {
       teamgroup.teams.forEach((team, i) => {
         if (
-          team.en.toLowerCase().indexOf(input.toLowerCase()) >= 0 ||
-          team.ko.toLowerCase().indexOf(input.toLowerCase()) >= 0
+          team.en.toLowerCase().indexOf(this.myTeam.toLowerCase()) >= 0 ||
+          team.ko.toLowerCase().indexOf(this.myTeam.toLowerCase()) >= 0
         ) {
-          console.log(team);
+          // console.log(team);
           return team;
         }
       });

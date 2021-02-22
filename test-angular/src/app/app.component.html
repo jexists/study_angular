@@ -2,13 +2,39 @@
 <!-- <input [formControl]="searchField" type="text" class="form-control" placeholder="인풋" required> -->
 
 <div class="form_area">
-  <input nz-input nzSize="large" placeholder="팀명적어주세요" [formControl]="searchField" name="team" [nzAutocomplete]="auto" required />
+  <input nz-input nzSize="large" placeholder="팀명적어주세요" [formControl]="searchField" name="team" [nzAutocomplete]="auto" required (input)="test($event)" />
   <!-- <input nz-input nzSize="large" placeholder="팀명적어주세요" [(ngModel)]="team" name="team" [nzAutocomplete]="auto" required /> -->
   <nz-autocomplete #auto>
+    <nz-auto-optgroup *ngFor="let group of teamlists" [nzLabel]="group.group">
+      <nz-auto-option nzCustomContent *ngFor="let name of teams" [nzLabel]="name.ko" [nzValue]="name.en">
+        {{name.ko + ' (' + name.en +')'}}
+      </nz-auto-option>
+    </nz-auto-optgroup>
+  </nz-autocomplete>
+  <!-- <nz-autocomplete #auto>
     <nz-auto-optgroup *ngFor="let group of teamlists" [nzLabel]="group.group">
       <nz-auto-option nzCustomContent *ngFor="let name of team" [nzLabel]="name.ko" [nzValue]="name.en">
         {{name.ko + ' (' + name.en +')'}}
       </nz-auto-option>
     </nz-auto-optgroup>
+  </nz-autocomplete> -->
+</div>
+<p>ngmodel</p>
+<div class="form_area">
+  <input nz-input nzSize="large" placeholder="팀명적어주세요" [(ngModel)]="myTeam" name="team" [nzAutocomplete]="auto" required (input)="test($event)" />
+  <!-- <input nz-input nzSize="large" placeholder="팀명적어주세요" [(ngModel)]="team" name="team" [nzAutocomplete]="auto" required /> -->
+  <nz-autocomplete #auto>
+    <nz-auto-optgroup *ngFor="let group of teamlists" [nzLabel]="group.group">
+      <nz-auto-option nzCustomContent *ngFor="let name of teams" [nzLabel]="name.ko" [nzValue]="name.en">
+        {{name.ko + ' (' + name.en +')'}}
+      </nz-auto-option>
+    </nz-auto-optgroup>
   </nz-autocomplete>
+  <!-- <nz-autocomplete #auto>
+    <nz-auto-optgroup *ngFor="let group of teamlists" [nzLabel]="group.group">
+      <nz-auto-option nzCustomContent *ngFor="let name of team" [nzLabel]="name.ko" [nzValue]="name.en">
+        {{name.ko + ' (' + name.en +')'}}
+      </nz-auto-option>
+    </nz-auto-optgroup>
+  </nz-autocomplete> -->
 </div>

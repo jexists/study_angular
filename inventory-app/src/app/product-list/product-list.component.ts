@@ -17,6 +17,8 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit() {
+    // console.log(this.productList);
+    
   }
 
   clicked(product: Product) {

@@ -34,32 +34,32 @@ export class AppComponent {
 
     this.products = [
       new Product(
-        'NiceHat',
-        'a nice black hat',
-        '/assets/images/products/black-hat/jpg',
-        ['man', 'hats', 'accessories'],
-        29.99
-      ),
+        'MYSHOES',
+        'Black Running Shoes',
+        '/assets/images/products/black-shoes.jpg',
+        ['Men', 'Shoes', 'Running Shoes'],
+        109.99),
       new Product(
-        'MyShoes',
-        'black running shoes',
-        '/assets/images/products/black-shoes/jpg',
-        ['man', 'shoes', 'running shoes'],
-        108.99
-      ),
+        'NEATOJACKET',
+        'Blue Jacket',
+        '/assets/images/products/blue-jacket.jpg',
+        ['Women', 'Apparel', 'Jackets & Vests'],
+        238.99),
       new Product(
-        'NeatoJacket',
-        'blue jacket',
-        '/assets/images/products/blue-jacket/jpg',
-        ['women', 'jacket', 'apparel'],
-        29.99
-      ),
+        'NICEHAT',
+        'A Nice Black Hat',
+        '/assets/images/products/black-hat.jpg',
+        ['Men', 'Accessories', 'Hats'],
+        29.99)
     ];
+
+    // console.log(this.products);
+
   }
 
 
   prouctSelected(product: Product) {
     console.log(product);
-    
+
   }
 }

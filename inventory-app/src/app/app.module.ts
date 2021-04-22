@@ -7,8 +7,9 @@ import { ProductRowComponent } from './product-row/product-row.component';
 import { ProductImageComponent } from './product-image/product-image.component';
 import { PriceDisplayComponent } from './price-display/price-display.component';
 import { ProductDepartmentComponent } from './product-department/product-department.component';
-import { DemoFormSkuComponent } from './demo-form-sku/demo-form-sku.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DemoFormBuilderComponent } from './demo-form-builder/demo-form-builder.component';
+import { DemoFormModelComponent } from './demo-form-model/demo-form-model.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductImageComponent,
     PriceDisplayComponent,
     ProductDepartmentComponent,
-    DemoFormSkuComponent,
+    DemoFormBuilderComponent,
+    DemoFormModelComponent,
   ],
   imports: [
     BrowserModule,

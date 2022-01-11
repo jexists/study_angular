@@ -1,3 +1,10 @@
-<p>
-  list works!
-</p>
+<div class="home_header flex_btw">
+  <div class="breadcrumb">
+    <h2>
+      <a routerLink="/talk">talk</a>
+      <span *ngIf="category_path">
+        <i class="breadcrumb_arrow"></i>
+        <a routerLink="/talk/{{category_path}}">{{category_path}}</a>
+      </span>
+    </h2>
+  </div>

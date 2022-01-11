@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  category_path?: string;
+  constructor(
+    private route: ActivatedRoute,
+    public router: Router,
+  ) { }
 
   ngOnInit() {
+    this.route.params
+      .subscribe(
+        params => {
+          // this.page = 1;
+          this.category_path = params['category_path'];
+        });
   }
+
 
 }

@@ -19,6 +19,16 @@ const routes: Routes = [
     data: { header: true },
     children: [
       {
+        path: '',
+        children: [
+          {
+            path: '', 
+            pathMatch: 'full',
+            component: ListComponent,
+          },
+        ],
+      },
+      {
         component: ViewComponent,
         matcher: NumericUrlMatcher,
       },

@@ -9,6 +9,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ListComponent implements OnInit {
 
   category_path?: string;
+
+  list = new Array(15);
+
   constructor(
     private route: ActivatedRoute,
     public router: Router,
@@ -18,7 +21,6 @@ export class ListComponent implements OnInit {
     this.route.params
       .subscribe(
         params => {
-          // this.page = 1;
           this.category_path = params['category_path'];
         });
   }

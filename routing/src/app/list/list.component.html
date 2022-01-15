@@ -8,3 +8,16 @@
       </span>
     </h2>
   </div>
+
+  <p>카테고리</p>
+  <ul>
+    <li><a [routerLink]="['/talk/community']">community</a></li>
+    <li><a [routerLink]="['/talk/qna']">qna</a></li>
+  </ul>
+
+  <p>리스트</p>
+  <ul>
+    <li *ngFor="let item of list; let i = index">
+      <a [routerLink]="['./' + (i+1)]">{{i + 1}}</a>
+    </li>
+  </ul>

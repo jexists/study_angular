@@ -33,12 +33,16 @@ const routes: Routes = [
         matcher: NumericUrlMatcher,
       },
       {
-        path: ':brd_path',
+        path: ':category_path',
         children: [
           {
             path: '', 
             pathMatch: 'full',
             component: ListComponent,
+          },
+          {
+            path: ':no',
+            component: ViewComponent,
           },
         ],
       },

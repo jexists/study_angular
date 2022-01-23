@@ -17,6 +17,7 @@ export class AppComponent {
     color: "green",
     backgroundColor: "#f00"
   }
+  color = '#00f';
 }
 
 // Directive 3가지

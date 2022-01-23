@@ -7,10 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directive';
+  isVisible = true;
+  list: { title: string }[] = [
+    { title: 'Tour of Heroes' },
+    { title: 'CLI Documentation' },
+    { title: 'Angular blog' },
+  ]
+  style = {
+    color: "green",
+    backgroundColor: "#f00"
+  }
 }
 
 // Directive 3가지
-// component
+//  
 // -> 템플릿이 있는 디렉티브
 // structural Directive
 // -> 템플릿에 DOM을 추가, 제거 => 템플릿의 구조를 변경

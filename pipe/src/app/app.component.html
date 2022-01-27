@@ -1,0 +1,11 @@
+<p>{{{name: "mark"} | json}}</p>
+<p>{{'markzzang' | slice:0:4}}</p>
+<p>{{['mark', 'anna'] | slice: 0:1}}</p>
+<p>{{'mark' | uppercase}}</p>
+<p>{{'mark' | lowercase}}</p>
+<p>{{'mark' | uppercase |lowercase}}</p>
+<!-- 연속해서 파이프 사용할때 -> 결국 소문자로 나옴 -->
+
+<p>{{123456789012 | date: "yyyy-MM-dd"}}</p>
+<!-- //프로미스나 서브스크립트 할경우 -->
+<p>{{data | async}}</p>

@@ -18,10 +18,8 @@ export class CoronaComponent implements OnInit {
 
     this.coronaService.getHospList(1, 10).pipe(first()).subscribe((res) => {
       console.log(res);
-
     }, (err) => {
       console.error(err);
-
     })
   }
 

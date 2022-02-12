@@ -1,8 +1,9 @@
 {
-  "/B551182": {
-    "target":"https://apis.data.go.kr",
-    "secure": true,
+  "/getHpsList": {
+    "target":"http://apis.data.go.kr/B551182/pubReliefHospService/getpubReliefHospList",
+    "secure": false,
     "changeOrigin":true,
-    "logLevel":"debug"
+    "logLevel":"debug",
+    "pathRewrite": { "^/getHpsList": "" }
   }
 }

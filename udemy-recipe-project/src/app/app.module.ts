@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
@@ -15,10 +16,11 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
     AppComponent,
     HeaderComponent,
     RecipesComponent,
-    ShoppingListComponent,
     RecipeDetailComponent,
+    RecipeItemComponent,
     RecipeListComponent,
-    ShoppingEditComponent
+    ShoppingListComponent,
+    ShoppingEditComponent,
   ],
   imports: [
     BrowserModule,

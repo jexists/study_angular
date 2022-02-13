@@ -50,3 +50,7 @@ export class CoronaService {
   // // http://apis.data.go.kr/B551182/pubReliefHospService/getpubReliefHospList?serviceKey=2mulQFMetApKqR%252Bx0UlbisWvmrIrEkX1pywLhQRE0ygbmrara2tM9iVQIwWH7P36nfwg%252Bmbyzsk7r9Q13KijxQ%253D%253D&pageNo=1&numOfRows=10&spclAdmTyCd=A0
 
   // http://apis.data.go.kr/B551182/pubReliefHospService/getpubReliefHospList?serviceKey=2mulQFMetApKqR%2Bx0UlbisWvmrIrEkX1pywLhQRE0ygbmrara2tM9iVQIwWH7P36nfwg%2Bmbyzsk7r9Q13KijxQ%3D%3D&pageNo=1&numOfRows=10&spclAdmTyCd=A0
+
+  // https://www.data.go.kr/iim/api/selectAPIAcountView.do
+
+  // http://127.0.0.1:4200/getHpsList?serviceKey=2mulQFMetApKqR%2Bx0UlbisWvmrIrEkX1pywLhQRE0ygbmrara2tM9iVQIwWH7P36nfwg%2Bmbyzsk7r9Q13KijxQ%3D%3D&pageNo=1&numOfRows=10&spclAdmTyCd=A0

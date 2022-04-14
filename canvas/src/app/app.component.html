@@ -1,7 +1,9 @@
 <div #screen>
   <h1>Hey!</h1>
   <p>some content</p>
-  <img style="width: 300px;" src="https://cdn.rebbit.net/market/mainimage/test1234_0a273761-bcf0-43cf-b03a-282266c91a6e_1040x1386.jpg" alt="test">
+  <img style="width: 300px; background: #fee;"
+    [appImageBase64]="'https://cdn.rebbit.net/market/mainimage/test1234_0a273761-bcf0-43cf-b03a-282266c91a6e_1040x1386.jpg'"
+    src="" alt="test" />
 </div>
 
 <button (click)="onCapture()">캡처하기</button>

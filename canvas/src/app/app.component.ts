@@ -14,19 +14,17 @@ export class AppComponent {
   constructor(
     private captureService: NgxCaptureService
   ) {
-
   }
 
   onCapture() {
-
     this.captureService.getImage(this.screen.nativeElement, true)
       .pipe(
         tap(img => {
-          console.log(img);
+          // console.log(img);
           var link = document.createElement("a");
           link.setAttribute('download', '');
           link.href = img;
-          link.download = `test`;
+          link.download = `test.jpg`;
           document.body.appendChild(link);
           link.click();
           link.remove();

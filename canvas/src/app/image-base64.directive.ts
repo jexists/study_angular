@@ -40,11 +40,13 @@ export class ImageBase64Directive {
       };
       reader.readAsDataURL(xhr.response);
     };
-    var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    xhr.open('GET', proxyUrl + targetUrl);
-    // xhr.open('GET', targetUrl);
+    // var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    // xhr.open('GET', proxyUrl + targetUrl);
+    xhr.open('GET', targetUrl);
     xhr.responseType = 'blob';
     xhr.send();
+    
+    // Cross Domain - CORS
   }
 
 }

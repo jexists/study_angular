@@ -1,0 +1,10 @@
+<h1>scully is live</h1>
+<router-outlet></router-outlet>
+
+<footer>
+  <ul>
+    <li *ngFor="let route of scully.available$ | async">
+      <a [routerLink]="route.route">{{route.title || route.route}}</a>
+    </li>
+  </ul>
+</footer>

@@ -1,6 +1,6 @@
 import { Component, signal, computed } from '@angular/core';
 
-import { DUMMY_LANGUAGES } from '../../dummy-languages'
+import { DUMMY_LANGUAGES } from '../../../dummy-languages'
 
 const randomIndex = Math.floor(Math.random() * DUMMY_LANGUAGES.length)
 

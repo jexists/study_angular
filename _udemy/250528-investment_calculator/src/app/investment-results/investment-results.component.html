@@ -1,5 +1,6 @@
 <!-- @if (!results) { -->
-@if (!results()) {
+<!-- @if (!results()) { -->
+@if (!results) {
 <p>Cacluate를 눌러주세요</p>
 } @else {
 <table>
@@ -15,7 +16,8 @@
 
   <tbody>
     <!-- @for (result of results; track result.year) { -->
-    @for (result of results(); track result.year) {
+    <!-- @for (result of results(); track result.year) { -->
+    @for (result of results; track result.year) {
     <tr>
       <td>{{result.year}}</td>
       <td>{{result.valueEndOfYear | currency: 'KRW'}}</td>

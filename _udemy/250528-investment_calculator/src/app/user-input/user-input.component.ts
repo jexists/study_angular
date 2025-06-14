@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, output, Output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import type { InvestmetntInput } from '../core/model/investment-input.model';
+import { InvestmentService } from '../core/service/investment.service';
 
 @Component({
   selector: 'app-user-input',
@@ -13,8 +14,10 @@ import type { InvestmetntInput } from '../core/model/investment-input.model';
   styleUrls: ['./user-input.component.css']
 })
 export class UserInputComponent {
+
+
   // @Output() calculate = new EventEmitter<InvestmetntInput>();
-  calculate = output<InvestmetntInput>();
+  // calculate = output<InvestmetntInput>();
 
   // enteredInitialInvestment = '10000';
   // enteredAnnualInvestment = '100';
@@ -26,7 +29,18 @@ export class UserInputComponent {
   enteredExpectedReturn = signal('5');
   enteredDuration = signal('10');
 
+  constructor(
+    private investmentService: InvestmentService
+  ) { }
+
   onSubmit() {
+    this.investmentService.calculateInvestmentResults({
+      initialInvestment: +this.enteredInitialInvestment(),
+      duration: +this.enteredDuration(),
+      expectedReturn: +this.enteredExpectedReturn(),
+      annualInvestment: +this.enteredAnnualInvestment(),
+    })
+
     // console.log(this.enteredInitialInvestment)
     // console.log(this.enteredAnnualInvestment)
     // console.log(this.enteredExpectedReturn)
@@ -37,12 +51,13 @@ export class UserInputComponent {
     //   expectedReturn: +this.enteredExpectedReturn,
     //   annualInvestment: +this.enteredAnnualInvestment,
     // })
-    this.calculate.emit({
-      initialInvestment: +this.enteredInitialInvestment(),
-      duration: +this.enteredDuration(),
-      expectedReturn: +this.enteredExpectedReturn(),
-      annualInvestment: +this.enteredAnnualInvestment(),
-    })
+
+    // this.calculate.emit({
+    //   initialInvestment: +this.enteredInitialInvestment(),
+    //   duration: +this.enteredDuration(),
+    //   expectedReturn: +this.enteredExpectedReturn(),
+    //   annualInvestment: +this.enteredAnnualInvestment(),
+    // })
 
     this.enteredInitialInvestment.set('0')
     this.enteredAnnualInvestment.set('0')

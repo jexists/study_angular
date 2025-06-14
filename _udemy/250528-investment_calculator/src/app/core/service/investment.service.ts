@@ -4,7 +4,17 @@ import type { InvestmetntInput } from "../model/investment-input.model";
 
 @Injectable({ providedIn: 'root' })
 export class InvestmentService {
-  onCalculateInvestmentResults(data: InvestmetntInput) {
+
+  resultsData?: {
+    year: number,
+    interest: number,
+    valueEndOfYear: number,
+    annualInvestment: number,
+    totalInterest: number,
+    totalAmountInvested: number,
+  }[]
+
+  calculateInvestmentResults(data: InvestmetntInput) {
     const {
       initialInvestment,
       duration,
@@ -31,7 +41,7 @@ export class InvestmentService {
       })
     }
 
-    // this.resultsData = annualData;
+    this.resultsData = annualData;
     // this.resultsData.set(annualData);
   }
 }

@@ -5,11 +5,10 @@ import { InvestmentService } from '../core/service/investment.service';
 
 @Component({
   selector: 'app-user-input',
-  standalone: true,
-  imports: [
-    FormsModule
-
-  ],
+  // standalone: true,
+  // imports: [
+  //   FormsModule
+  // ],
   templateUrl: './user-input.component.html',
   styleUrls: ['./user-input.component.css']
 })

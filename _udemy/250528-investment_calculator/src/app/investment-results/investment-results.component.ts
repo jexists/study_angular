@@ -4,10 +4,10 @@ import { Component, computed, inject, input, Input, OnInit } from '@angular/core
 
 @Component({
   selector: 'app-investment-results',
-  standalone: true,
-  imports: [
-    CurrencyPipe
-  ],
+  // standalone: true,
+  // imports: [
+  //   CurrencyPipe
+  // ],
   templateUrl: './investment-results.component.html',
   styleUrls: ['./investment-results.component.css']
 })

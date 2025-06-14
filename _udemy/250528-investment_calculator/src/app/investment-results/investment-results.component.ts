@@ -1,5 +1,5 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-investment-results',
@@ -17,12 +17,20 @@ export class InvestmentResultsComponent {
   // @Input() results?; // 선택적인 속성
   // @Input() results!;
 
-  @Input() results?: {
+  // @Input() results?: {
+  //   year: number,
+  //   interest: number,
+  //   valueEndOfYear: number,
+  //   annualInvestment: number,
+  //   totalInterest: number,
+  //   totalAmountInvested: number,
+  // }[];
+  results = input<{
     year: number,
     interest: number,
     valueEndOfYear: number,
     annualInvestment: number,
     totalInterest: number,
     totalAmountInvested: number,
-  }[];
+  }[]>();
 }
